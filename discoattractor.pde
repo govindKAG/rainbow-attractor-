@@ -1,4 +1,4 @@
-// disco lorentz attarctor 
+// rainbow lorentz attarctor 
 
 
 import peasy.*;
@@ -38,7 +38,7 @@ void draw() {
   points.add(new PVector(x, y, z));
 
   translate(0, 0, -80);
-  //translate(width/2, height/2);
+
   scale(5);
   stroke(255);
   noFill();
@@ -48,9 +48,6 @@ void draw() {
   for (PVector v : points) {
     stroke(hu, 255, 255);
     vertex(v.x, v.y,v.z);
-    //PVector offset = PVector.random3D();
-    //offset.mult(0.1);
-    //v.add(offset);
 
     hu += 0.1+ (mouseX+mouseY)%255;
     if (hu > 255) {
@@ -60,5 +57,4 @@ void draw() {
   endShape();
 
 
-  //println(x,y,z);
 }
